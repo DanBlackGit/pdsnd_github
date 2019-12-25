@@ -249,11 +249,7 @@ def main():
             while (count+5) <= indexlen:
                 rawdata = input('\nWould you like to see more raw data for your selected filters? Enter yes or no.\n')
                 if (rawdata.lower() == 'yes'):
-                    print(df.iloc[count+0])
-                    print(df.iloc[count+1])
-                    print(df.iloc[count+2])
-                    print(df.iloc[count+3])
-                    print(df.iloc[count+4])
+                    print(df.iloc[count:count+5])
                     count += 5    
                 else:
                     break
