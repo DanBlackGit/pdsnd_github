@@ -232,11 +232,7 @@ def main():
         if rawdata.lower() == 'yes':
             # if there are enough rows in the data set, display the first 5 rows, otherwise only 1 row
             if indexlen >= 5:
-                print(df.iloc[0])
-                print(df.iloc[1])
-                print(df.iloc[2])
-                print(df.iloc[3])
-                print(df.iloc[4])
+                print(df.iloc[0:4])
             else:
                 print('less than 5 rows in your data set, i will only print the first row.\n')
                 print(df.iloc[0])
@@ -249,11 +245,7 @@ def main():
             while (count+5) <= indexlen:
                 rawdata = input('\nWould you like to see more raw data for your selected filters? Enter yes or no.\n')
                 if (rawdata.lower() == 'yes'):
-                    print(df.iloc[count+0])
-                    print(df.iloc[count+1])
-                    print(df.iloc[count+2])
-                    print(df.iloc[count+3])
-                    print(df.iloc[count+4])
+                    print(df.iloc[count:count+5])
                     count += 5    
                 else:
                     break
